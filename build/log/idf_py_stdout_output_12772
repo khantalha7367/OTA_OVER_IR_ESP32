@@ -1,0 +1,59 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\ESP-IDF\Espressif\frameworks\esp-idf-v5.0.4\examples\native_ota_library\build\bootloader\esp-idf\esptool_py && D:\ESP-IDF\Espressif\python_env\idf5.0_py3.11_env\Scripts\python.exe D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6760 bytes. 0x8a0 bytes (8%) free.
+[2/7] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/native_ota_example.c.obj
+In file included from D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/main/native_ota_example.c:30:
+D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/main/nec.h:41:39: warning: 'task_fatal_error' used but never defined
+   41 | static void __attribute__((noreturn)) task_fatal_error(void);
+      |                                       ^~~~~~~~~~~~~~~~
+In file included from D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/main/native_ota_example.c:30:
+D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/main/nec.h:29:20: warning: 'nec_check_in_range' used but never defined
+   29 | static inline bool nec_check_in_range(uint32_t signal_duration, uint32_t spec_duration);
+      |                    ^~~~~~~~~~~~~~~~~~
+D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/main/nec.h:31:13: warning: 'nec_parse_logic0' used but never defined
+   31 | static bool nec_parse_logic0(rmt_symbol_word_t *rmt_nec_symbols);
+      |             ^~~~~~~~~~~~~~~~
+D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/main/nec.h:33:13: warning: 'nec_parse_logic1' used but never defined
+   33 | static bool nec_parse_logic1(rmt_symbol_word_t *rmt_nec_symbols);
+      |             ^~~~~~~~~~~~~~~~
+D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/main/nec.h:35:13: warning: 'example_rmt_rx_done_callback' used but never defined
+   35 | static bool example_rmt_rx_done_callback(rmt_channel_handle_t channel, const rmt_rx_done_event_data_t *edata, void *user_data);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+In file included from D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/main/native_ota_example.c:30:
+D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/main/nec.h:37:13: warning: 'diagnostic' used but never defined
+   37 | static bool diagnostic(void);
+      |             ^~~~~~~~~~
+D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/main/nec.h:39:13: warning: 'infinite_loop' used but never defined
+   39 | static void infinite_loop(void);
+      |             ^~~~~~~~~~~~~
+[3/7] Linking C static library esp-idf\main\libmain.a
+[4/7] Generating ld/sections.ld
+[5/7] Linking CXX executable native_ota.elf
+FAILED: native_ota.elf 
+cmd.exe /C "cd . && D:\ESP-IDF\Espressif\tools\xtensa-esp32-elf\esp-2022r1-11.2.0\xtensa-esp32-elf\bin\xtensa-esp32-elf-g++.exe -mlongcalls -Wno-frame-address  @CMakeFiles\native_ota.elf.rsp -o native_ota.elf  && cd ."
+d:/esp-idf/espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld.exe: esp-idf/main/libmain.a(native_ota_example.c.obj):(.literal.nec_parse_frame_repeat+0x4): undefined reference to `nec_check_in_range'
+d:/esp-idf/espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld.exe: esp-idf/main/libmain.a(native_ota_example.c.obj):(.literal.nec_parse_frame+0xc): undefined reference to `nec_parse_logic1'
+d:/esp-idf/espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld.exe: esp-idf/main/libmain.a(native_ota_example.c.obj):(.literal.nec_parse_frame+0x10): undefined reference to `nec_parse_logic0'
+d:/esp-idf/espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld.exe: esp-idf/main/libmain.a(native_ota_example.c.obj):(.literal.ota_init+0x60): undefined reference to `diagnostic'
+d:/esp-idf/espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld.exe: esp-idf/main/libmain.a(native_ota_example.c.obj):(.literal.ota_example_task+0x34): undefined reference to `task_fatal_error'
+d:/esp-idf/espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld.exe: esp-idf/main/libmain.a(native_ota_example.c.obj):(.literal.rmt_init+0x1c): undefined reference to `example_rmt_rx_done_callback'
+d:/esp-idf/espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld.exe: esp-idf/main/libmain.a(native_ota_example.c.obj): in function `nec_parse_frame_repeat':
+D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/main/native_ota_example.c:481: undefined reference to `nec_check_in_range'
+d:/esp-idf/espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld.exe: D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/main/native_ota_example.c:482: undefined reference to `nec_check_in_range'
+d:/esp-idf/espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld.exe: esp-idf/main/libmain.a(native_ota_example.c.obj): in function `nec_parse_frame':
+D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/main/native_ota_example.c:444: undefined reference to `nec_check_in_range'
+d:/esp-idf/espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld.exe: D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/main/native_ota_example.c:445: undefined reference to `nec_check_in_range'
+d:/esp-idf/espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld.exe: D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/main/native_ota_example.c:451: undefined reference to `nec_parse_logic1'
+d:/esp-idf/espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld.exe: D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/main/native_ota_example.c:453: undefined reference to `nec_parse_logic0'
+d:/esp-idf/espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld.exe: D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/main/native_ota_example.c:461: undefined reference to `nec_parse_logic1'
+d:/esp-idf/espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld.exe: D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/main/native_ota_example.c:463: undefined reference to `nec_parse_logic0'
+d:/esp-idf/espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld.exe: esp-idf/main/libmain.a(native_ota_example.c.obj): in function `ota_init':
+D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/main/native_ota_example.c:130: undefined reference to `diagnostic'
+d:/esp-idf/espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld.exe: esp-idf/main/libmain.a(native_ota_example.c.obj): in function `ota_example_task':
+D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/main/native_ota_example.c:177: undefined reference to `task_fatal_error'
+d:/esp-idf/espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld.exe: D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/main/native_ota_example.c:261: undefined reference to `task_fatal_error'
+d:/esp-idf/espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld.exe: D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/main/native_ota_example.c:263: undefined reference to `task_fatal_error'
+d:/esp-idf/espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld.exe: D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/main/native_ota_example.c:300: undefined reference to `task_fatal_error'
+d:/esp-idf/espressif/tools/xtensa-esp32-elf/esp-2022r1-11.2.0/xtensa-esp32-elf/bin/../lib/gcc/xtensa-esp32-elf/11.2.0/../../../../xtensa-esp32-elf/bin/ld.exe: D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/main/native_ota_example.c:303: undefined reference to `task_fatal_error'
+collect2.exe: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.

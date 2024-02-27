@@ -1,0 +1,54 @@
+[1/10] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+In file included from D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/main/main.c:23:
+D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/main/native_ota_example.h:40:39: warning: 'task_fatal_error' declared 'static' but never defined [-Wunused-function]
+   40 | static void __attribute__((noreturn)) task_fatal_error(void);
+      |                                       ^~~~~~~~~~~~~~~~
+D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/main/native_ota_example.h:42:13: warning: 'print_sha256' declared 'static' but never defined [-Wunused-function]
+   42 | static void print_sha256 (const uint8_t *image_hash, const char *label);
+      |             ^~~~~~~~~~~~
+D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/main/native_ota_example.h:44:13: warning: 'infinite_loop' declared 'static' but never defined [-Wunused-function]
+   44 | static void infinite_loop(void);
+      |             ^~~~~~~~~~~~~
+D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/main/native_ota_example.h:46:13: warning: 'diagnostic' declared 'static' but never defined [-Wunused-function]
+   46 | static bool diagnostic(void);
+      |             ^~~~~~~~~~
+D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/main/native_ota_example.h:48:20: warning: 'nec_check_in_range' declared 'static' but never defined [-Wunused-function]
+   48 | static inline bool nec_check_in_range(uint32_t signal_duration, uint32_t spec_duration);
+      |                    ^~~~~~~~~~~~~~~~~~
+D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/main/native_ota_example.h:50:13: warning: 'nec_parse_logic0' declared 'static' but never defined [-Wunused-function]
+   50 | static bool nec_parse_logic0(rmt_symbol_word_t *rmt_nec_symbols);
+      |             ^~~~~~~~~~~~~~~~
+D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/main/native_ota_example.h:52:13: warning: 'nec_parse_logic1' declared 'static' but never defined [-Wunused-function]
+   52 | static bool nec_parse_logic1(rmt_symbol_word_t *rmt_nec_symbols);
+      |             ^~~~~~~~~~~~~~~~
+D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/main/native_ota_example.h:54:13: warning: 'nec_parse_frame' declared 'static' but never defined [-Wunused-function]
+   54 | static bool nec_parse_frame(rmt_symbol_word_t *rmt_nec_symbols);
+      |             ^~~~~~~~~~~~~~~
+D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/main/native_ota_example.h:56:13: warning: 'nec_parse_frame_repeat' declared 'static' but never defined [-Wunused-function]
+   56 | static bool nec_parse_frame_repeat(rmt_symbol_word_t *rmt_nec_symbols);
+      |             ^~~~~~~~~~~~~~~~~~~~~~
+D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/main/native_ota_example.h:58:13: warning: 'example_parse_nec_frame' declared 'static' but never defined [-Wunused-function]
+   58 | static void example_parse_nec_frame(rmt_symbol_word_t *rmt_nec_symbols, size_t symbol_num);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~
+D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/main/native_ota_example.h:60:13: warning: 'example_rmt_rx_done_callback' declared 'static' but never defined [-Wunused-function]
+   60 | static bool example_rmt_rx_done_callback(rmt_channel_handle_t channel, const rmt_rx_done_event_data_t *edata, void *user_data);
+      |             ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+[2/10] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\ESP-IDF\Espressif\frameworks\esp-idf-v5.0.4\examples\native_ota_library\build\bootloader\esp-idf\esptool_py && D:\ESP-IDF\Espressif\python_env\idf5.0_py3.11_env\Scripts\python.exe D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6760 bytes. 0x8a0 bytes (8%) free.
+[3/8] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/native_ota_example.c.obj
+D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/main/native_ota_example.c: In function 'ota_init':
+D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/main/native_ota_example.c:202:30: warning: unused variable 'config' [-Wunused-variable]
+  202 |     esp_http_client_config_t config = {
+      |                              ^~~~~~
+[4/8] Linking C static library esp-idf\main\libmain.a
+[5/8] Generating ld/sections.ld
+[6/8] Linking CXX executable native_ota.elf
+[7/8] Generating binary image from built executable
+esptool.py v4.6.2
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/build/native_ota.bin
+[8/8] cmd.exe /C "cd /D D:\ESP-IDF\Espressif\frameworks\esp-idf-v5.0.4\examples\native_ota_library\build\esp-idf\esptool_py && D:\ESP-IDF\Espressif\python_env\idf5.0_py3.11_env\Scripts\python.exe D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/build/partition_table/partition-table.bin D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/build/native_ota.bin"
+native_ota.bin binary size 0x51a60 bytes. Smallest app partition is 0x100000 bytes. 0xae5a0 bytes (68%) free.

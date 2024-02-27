@@ -1,0 +1,15 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\ESP-IDF\Espressif\frameworks\esp-idf-v5.0.4\examples\native_ota_library\build\bootloader\esp-idf\esptool_py && D:\ESP-IDF\Espressif\python_env\idf5.0_py3.11_env\Scripts\python.exe D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6760 bytes. 0x8a0 bytes (8%) free.
+[2/7] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/native_ota_example.c.obj
+[3/7] Linking C static library esp-idf\main\libmain.a
+[4/7] Generating ld/sections.ld
+[5/7] Linking CXX executable native_ota.elf
+[6/7] Generating binary image from built executable
+esptool.py v4.6.2
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/build/native_ota.bin
+[7/7] cmd.exe /C "cd /D D:\ESP-IDF\Espressif\frameworks\esp-idf-v5.0.4\examples\native_ota_library\build\esp-idf\esptool_py && D:\ESP-IDF\Espressif\python_env\idf5.0_py3.11_env\Scripts\python.exe D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/build/partition_table/partition-table.bin D:/ESP-IDF/Espressif/frameworks/esp-idf-v5.0.4/examples/native_ota_library/build/native_ota.bin"
+native_ota.bin binary size 0x50990 bytes. Smallest app partition is 0x100000 bytes. 0xaf670 bytes (69%) free.

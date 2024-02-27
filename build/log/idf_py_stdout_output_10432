@@ -1,0 +1,83 @@
+ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x13 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6992
+load:0x40078000,len:15512
+load:0x40080400,len:3864
+entry 0x40080650
+[0;32mI (27) boot: ESP-IDF v5.0.4-dirty 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time 10:56:14[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v1.0[0m
+[0;32mI (35) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (39) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (44) boot.esp32: SPI Flash Size : 4MB[0m
+[0;32mI (48) boot: Enabling RNG early entropy source...[0m
+[0;32mI (54) boot: Partition Table:[0m
+[0;32mI (57) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (72) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (79) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (87) boot:  3 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (94) boot:  4 ota_0            OTA app          00 10 00110000 00100000[0m
+[0;32mI (102) boot:  5 ota_1            OTA app          00 11 00210000 00100000[0m
+[0;32mI (109) boot: End of partition table[0m
+[0;32mI (114) boot: Defaulting to factory image[0m
+[0;32mI (118) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=0fe0ch ( 65036) map[0m
+[0;32mI (151) esp_image: segment 1: paddr=0001fe34 vaddr=3ffb0000 size=001e4h (   484) load[0m
+[0;32mI (151) esp_image: segment 2: paddr=00020020 vaddr=400d0020 size=3196ch (203116) map[0m
+[0;32mI (230) esp_image: segment 3: paddr=00051994 vaddr=3ffb01e4 size=01de4h (  7652) load[0m
+[0;32mI (233) esp_image: segment 4: paddr=00053780 vaddr=40080000 size=0d254h ( 53844) load[0m
+[0;32mI (264) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (264) boot: Disabling RNG early entropy source...[0m
+[0;32mI (276) cpu_start: Multicore app[0m
+[0;32mI (276) cpu_start: Pro cpu up.[0m
+[0;32mI (276) cpu_start: Starting app cpu, entry point is 0x40081248[0m
+[0;32mI (0) cpu_start: App cpu up.[0m
+[0;32mI (294) cpu_start: Pro cpu start user code[0m
+[0;32mI (294) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (294) cpu_start: Application information:[0m
+[0;32mI (299) cpu_start: Project name:     native_ota[0m
+[0;32mI (304) cpu_start: App version:      1[0m
+[0;32mI (308) cpu_start: Compile time:     Feb 17 2024 10:55:38[0m
+[0;32mI (314) cpu_start: ELF file SHA256:  fd3d7463d73198f8...[0m
+[0;32mI (320) cpu_start: ESP-IDF:          v5.0.4-dirty[0m
+[0;32mI (326) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (331) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (335) cpu_start: Chip rev:         v1.0[0m
+[0;32mI (340) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (347) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (353) heap_init: At 3FFB3418 len 0002CBE8 (178 KiB): DRAM[0m
+[0;32mI (360) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (366) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (372) heap_init: At 4008D254 len 00012DAC (75 KiB): IRAM[0m
+[0;32mI (380) spi_flash: detected chip: generic[0m
+[0;32mI (383) spi_flash: flash io: dio[0m
+[0;32mI (388) app_start: Starting scheduler on CPU0[0m
+[0;32[0;32mI (392) app_start: Starting scheduler on CPU1[0m
+mI (392) main_task: Started on CPU0[0m
+[0;32mI (402) main_task: Calling app_main()[0m
+[0;32mI (402) example: SHA-256 for the partition table: : d1c0e9d02fa9d26cd2e1984e7b5dd20157204f501ddc83ce82229e5f3175ee8b[0m
+[0;32mI (422) example: SHA-256 for bootloader: : f8e2fe68a98f59a982395dd371afda45af19db3a20aa0ad69ad49436abfe4844[0m
+[0;32mI (502) example: SHA-256 for current firmware: : 94c985c3580723d04f15ba3cc241c00451ba8d6767f89b5052411a5cdf8e5770[0m
+[0;32mI (512) example: Initialising OTA task[0m
+[0;32mI (522) example: Running partition type 0 subtype 0 (offset 0x00010000)[0m
+[0;32mI (522) example: Writing to partition subtype 16 at offset 0x110000[0m
+[0;32mI (522) example: create RMT RX channel[0m
+[0;32mI (532) gpio: GPIO[19]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (542) example: register RX done callback[0m
+[0;32mI (542) example: create RMT TX channel[0m
+[0;32mI (552) gpio: GPIO[18]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (552) example: modulate carrier to TX channel[0m
+[0;32mI (562) example: install IR NEC encoder[0m
+[0;32mI (562) example: enable RMT TX and RX channels[0m
+NEC frame start---
+---NEC frame end: Unknown NEC frame
+
+data_read=2
+[0;31mE (582) example: Successfully allocated memory for OTA data[0m
+[0;31mE (582) example: received package is not fit len[0m
+[0;31mE (592) example: Exiting task due to fatal error...[0m
